@@ -1,0 +1,173 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%))
+    no-repeat;
+  color: hsl(240, 6%, 50%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-container {
+  background: white;
+  position: relative;
+  border-radius: 1.2rem;
+  width: 64vw;
+  height: 57vh;
+  align-self: center;
+  box-shadow: 0 15px 30px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  margin-left: 46px;
+  margin-top: 45px;
+}
+
+.orange-box-container,
+.bg-pattern.desktop,
+.illustration-woman {
+  position: absolute;
+}
+
+.bg-pattern.desktop {
+  display: block;
+  width: 100%;
+}
+
+.bg-pattern.mobile {
+  display: none;
+}
+
+.illustration-woman.desktop {
+  display: block;
+  top: 10%;
+  width: 90%;
+  left: -10%;
+}
+
+.illustration-woman.mobile {
+  display: none;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-container {
+  flex: 1;
+  padding-top: 5%;
+}
+
+.faq-container > h1 {
+  font-weight: 700;
+}
+
+.question {
+  display: block;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.question::after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  background: url("images/icon-arrow-down.svg") no-repeat;
+  width: 10px;
+  height: 7px;
+  float: right;
+  transition-duration: 0.4s;
+  transition-property: transform;
+}
+
+.question.active {
+  border-bottom: none;
+  font-weight: bold;
+  color: black;
+}
+
+.question.active::after {
+  transform: rotate(180deg);
+}
+
+.faq-container > h1 {
+  margin-left: 14px;
+}
+
+.question {
+  font-size: 14px;
+  margin-left: 14px;
+  display: block;
+  height: 29px;
+  width: 85%;
+  padding-top: 21px;
+}
+
+.answer {
+  padding-left: 14px;
+  font-size: 12px;
+  line-height: 15px;
+  width: 85%;
+}
+
+.answer {
+  display: none;
+}
+
+.question.active + .answer {
+  animation: display 0.3s ease-in-out;
+}
+
+@keyframes display {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .orange-box-container {
+    left: -10%;
+    top: 40%;
+    width: auto;
+  }
+
+  .illustration-woman.desktop {
+    top: 14%;
+    width: 101%;
+    left: -17%;
+  }
+
+  .bg-pattern.desktop {
+    width: 140%;
+    left: -55%;
+    top: -14%;
+  }
+}
+
+/*Ipad portrait(768 x 1024)*/
+/* @media screen and (max-width: 768px) {} */
+
+/*Tablet (480 x 640)*/
+/* @media screen and (max-width: 480px) {
+} */
+
+/*Iphone(480 x 640)*/
+/* @media screen and (max-width: 320px) {
+} */
+
+/*Smaller Smart phone*/
+/* @media screen and (max-width: 240px) {
+} */
