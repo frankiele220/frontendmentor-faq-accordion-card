@@ -93,6 +93,7 @@ body {
 
 .faq-container > h1 {
   margin-left: 14px;
+  color: black;
 }
 
 .question {
@@ -100,7 +101,7 @@ body {
   margin-left: 14px;
   display: block;
   height: 29px;
-  width: 85%;
+  width: 80%;
   padding-top: 21px;
 }
 
@@ -108,7 +109,7 @@ body {
   padding-left: 14px;
   font-size: 12px;
   line-height: 15px;
-  width: 85%;
+  width: 80%;
 }
 
 .answer {
@@ -117,6 +118,24 @@ body {
 
 .question.active + .answer {
   animation: display 0.3s ease-in-out;
+}
+
+.orange-box-container {
+  left: -8%;
+  top: 46%;
+  width: auto;
+}
+
+.illustration-woman.desktop {
+  top: 11%;
+  width: 101%;
+  left: -19%;
+}
+
+.bg-pattern.desktop {
+  width: 140%;
+  left: -57%;
+  top: -18%;
 }
 
 @keyframes display {
