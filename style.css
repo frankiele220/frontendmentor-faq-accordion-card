@@ -122,6 +122,11 @@ body {
           transform: rotate(180deg);
 }
 
+.main-container .faq-container .question.active + .answer {
+  -webkit-animation: display 0.4s ease-in-out;
+          animation: display 0.4s ease-in-out;
+}
+
 .main-container .faq-container .answer {
   padding-left: 14px;
   font-size: 12px;
