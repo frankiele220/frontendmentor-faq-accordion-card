@@ -1,0 +1,161 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%))
+    no-repeat;
+  color: hsl(240, 6%, 50%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-container {
+  background: white;
+  position: relative;
+  border-radius: 1.2rem;
+  width: 1228px;
+  height: 556px;
+  align-self: center;
+  box-shadow: 0 15px 30px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  margin-left: 46px;
+  margin-top: 45px;
+
+  .orange-box-container,
+  .bg-pattern.desktop,
+  .illustration-woman {
+    position: absolute;
+  }
+
+  .bg-pattern {
+    &.desktop {
+      display: block;
+      width: 100%;
+    }
+    &.mobile {
+      display: none;
+    }
+  }
+
+  .illustration-woman {
+    &.desktop {
+      display: block;
+      top: 11%;
+      width: 101%;
+      left: -19%;
+    }
+    &.mobile {
+      display: none;
+    }
+  }
+
+  .image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .faq-container {
+    flex: 1;
+    padding-top: 5%;
+    h1 {
+      font-weight: 700;
+      margin-left: 14px;
+      color: black;
+    }
+
+    .question {
+      display: block;
+      border-bottom: 1px solid hsl(240, 5%, 91%);
+      font-size: 14px;
+      margin-left: 14px;
+      display: block;
+      height: 29px;
+      width: 80%;
+      padding-top: 21px;
+      &::after {
+        content: "";
+        display: block;
+        overflow: hidden;
+        background: url("images/icon-arrow-down.svg") no-repeat;
+        width: 10px;
+        height: 7px;
+        float: right;
+        transition-duration: 0.4s;
+        transition-property: transform;
+      }
+
+      &.active {
+        border-bottom: none;
+        font-weight: bold;
+        color: black;
+        &::after {
+          transform: rotate(180deg);
+        }
+        & + .answer {
+        }
+      }
+    }
+
+    .answer {
+      padding-left: 14px;
+      font-size: 12px;
+      line-height: 15px;
+      width: 80%;
+      display: none;
+    }
+  }
+
+  .orange-box-container {
+    left: -8%;
+    top: 46%;
+    width: auto;
+  }
+
+  .bg-pattern {
+    &.desktop {
+      width: 140%;
+      left: -57%;
+      top: -18%;
+    }
+  }
+}
+
+@keyframes display {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .orange-box-container {
+    left: -10%;
+    top: 40%;
+    width: auto;
+  }
+
+  .illustration-woman.desktop {
+    top: 14%;
+    width: 101%;
+    left: -17%;
+  }
+
+  .bg-pattern.desktop {
+    width: 140%;
+    left: -55%;
+    top: -14%;
+  }
+}
